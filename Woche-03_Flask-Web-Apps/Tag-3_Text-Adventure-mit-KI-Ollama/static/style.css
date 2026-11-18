@@ -1,0 +1,118 @@
+body {
+    background-color: #1e1e2e;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.box {
+    background-color: #2a2a3d;
+    padding: 30px;
+    border-radius: 10px;
+    width: 550px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.5s;
+}
+
+.dunkel {
+    background-color: #0d0d12;
+    color: #666;
+}
+
+.gold {
+    background-color: #4a3b10;
+    box-shadow: 0 0 40px #f5c542;
+}
+
+h1 {
+    color: #f5c542;
+    text-align: center;
+}
+
+h2 {
+    color: #8ecae6;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #aaa;
+}
+
+.nachricht {
+    background-color: #3a3a55;
+    padding: 10px;
+    border-left: 4px solid #f5c542;
+}
+
+.sieg {
+    font-size: 24px;
+    text-align: center;
+    color: #f5c542;
+}
+
+button {
+    background-color: #4a6fa5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+.reden {
+    background-color: #6a4c93;
+}
+
+.nimm {
+    background-color: #3d8b5f;
+}
+
+.neu {
+    background-color: #8b3d3d;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #444;
+    margin-top: 20px;
+}
+
+.chat {
+    margin-top: 20px;
+    background-color: #232334;
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+
+.chat p {
+    margin: 6px 0;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+.chat .ich {
+    background-color: #34405a;
+}
+
+.chat .npc {
+    background-color: #3d3155;
+}
+
+.chat input {
+    width: 70%;
+    padding: 9px;
+    border-radius: 5px;
+    border: none;
+    background-color: #3a3a55;
+    color: white;
+}

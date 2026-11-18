@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Text Adventure</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="box {% if sieht_nichts %}dunkel{% endif %} {% if gewonnen %}gold{% endif %}">
+        <h1>Das Haus des Magiers</h1>
+
+        <div class="info">
+            <span>Schritte: {{ spieler.schritte }}</span>
+            <span>{{ spieler.inventar | join(", ") or "leer" }}</span>
+        </div>
+
+        <h2>{{ raum.name }}</h2>
+
+        {% if sieht_nichts %}
+            <p>Es ist stockdunkel. Du siehst nichts...</p>
+        {% else %}
+            <p>{{ raum.beschreibung }}</p>
+        {% endif %}
+
+        {% if nachricht %}
+            <p class="nachricht">{{ nachricht }}</p>
+        {% endif %}
+
+        {% if gewonnen %}
+            <p class="sieg">Gewonnen in {{ spieler.schritte }} Schritten!</p>
+        {% endif %}
+
+        <form method="post">
+            <h3>Ausgänge</h3>
+            {% for richtung in raum.ausgaenge %}
+                <button name="aktion" value="{{ richtung }}">{{ richtung }}</button>
+            {% endfor %}
+
+            {% if raum.gegenstaende and not sieht_nichts %}
+                <h3>Gegenstände</h3>
+                {% for ding in raum.gegenstaende %}
+                    <button class="nimm" name="aktion" value="nimm_{{ ding }}">nimm {{ ding }}</button>
+                {% endfor %}
+            {% endif %}
+
+            {% if hier %}
+                <h3>Reden mit</h3>
+                {% for name in hier %}
+                    <button class="reden" name="aktion" value="reden_{{ name }}">
+                        {{ figuren[name].name }}
+                    </button>
+                {% endfor %}
+            {% endif %}
+
+            <hr>
+            <button class="neu" name="aktion" value="neu">Neues Spiel</button>
+        </form>
+    </div>
+</body>
+</html>
