@@ -6,6 +6,7 @@ Hier sammle ich alle Übungen und Projekte aus meiner Ausbildung an der IT Schul
 
 | Woche | Thema | Inhalt |
 |-------|-------|--------|
+| [Woche 1](Woche-01_HTML-CSS-Portfolio) | 🎨 HTML & CSS | Persönliche Portfolio-Website (🔒 privates Repo, Zugriff auf Anfrage) |
 | [Woche 2](Woche-02_Python-Grundlagen) | 🐍 Python-Grundlagen | Variablen, Bedingungen, Schleifen, Funktionen, Turtle-Grafik, Klassen |
 | [Woche 3](Woche-03_Flask-Web-Apps) | 🌐 Flask Web-Apps | Text-Adventure „Das Haus des Magiers“ im Browser – später mit KI-Charakteren (Ollama) |
 
